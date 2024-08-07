@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 
-export default function SearchBar() {
+// eslint-disable-next-line react/prop-types
+export default function SearchBar({ setResults }) {
   const [input, setInput] = useState("");
 
   const fetchData = (value) => {
@@ -8,9 +10,14 @@ export default function SearchBar() {
       .then((response) => response.json())
       .then((json) => {
         const results = json.filter((user) => {
-          return value && user && user.name && user.name.toLowerCase().includes(value)
-        })
-        console.log(results);
+          return (
+            value &&
+            user &&
+            user.name &&
+            user.name.toLowerCase().includes(value)
+          );
+        });
+        setResults(results);
       });
   };
 
@@ -24,16 +31,14 @@ export default function SearchBar() {
       <nav className="navbar navbar-light bg-light searchbar-container">
         <form className="form-inline">
           <input
-            className="form-control mr-sm-2"
+            className="form-control mr-sm-2 input-custom"
             type="search"
             placeholder="Type to find a user..."
             aria-label="Search"
             value={input}
             onChange={(e) => handleChange(e.target.value)}
           />
-          <button className="btn btn-info my-2 my-sm-0" type="submit">
-            Search
-          </button>
+          <FaSearch className="input-search-icon" />
         </form>
       </nav>
     </>

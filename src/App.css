@@ -45,3 +45,34 @@
 .searchbar-container {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
+
+.results-container {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.input-search-icon {
+    color: #17A2B8;
+    font-size: 1.5rem;
+} 
+
+.search-result {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.search-result:hover {
+  background-color: #17a3b8;
+  color: #ffffff;
+}
+
+.alert {
+  font-weight: 500;
+  color: #17a3b8;
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 
-export const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-light navbar-custom-bg">
       <div className="title-container">
@@ -11,4 +11,4 @@ export const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
