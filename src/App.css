@@ -23,14 +23,15 @@
   background-color: #d9afd9;
   border-radius: 0;
   color: #ffffff;
-  
-  p, .search-icon  {
+
+  p,
+  .search-icon {
     font-size: 1.5rem;
-    margin: .5rem;
+    margin: 0.5rem;
     font-weight: 500;
   }
 
-   .icon-container{
+  .icon-container {
     display: flex;
     align-items: center;
   }
@@ -41,3 +42,6 @@
   flex-direction: row;
 }
 
+.searchbar-container {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
